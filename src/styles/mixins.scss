@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+@mixin title() {
+  font-family: "PlayfairDisplay";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  span {
+    font-family: "PlayfairDisplay";
+    color: $text-green-color;
+    font-style: italic;
+  }
+  @media (max-width: 505px) {
+    font-size: 35px;
+  }
+}

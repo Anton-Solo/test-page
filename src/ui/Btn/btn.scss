@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $btn-color;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      height: 13px;
+      width: 100%;
+      background-color: rgba(241, 137, 123, 0.3);
+    }
+  }
+
+  &:hover {
+    .btn-title {
+      color: #e64f3a;
+      &::before {
+        background-color: rgba(230, 79, 58, 0.3);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.comment {
+  margin-bottom: 120px;
+  @media (max-width: 767px) {
+    margin-bottom: 80px;
+  }
+  &-wrap {
+    background-image: url(../../images/comment-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 100px 100px 160px;
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
+  }
+  &-main {
+    position: relative;
+    max-width: 710px;
+    margin-bottom: 40px;
+
+    span {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 46px;
+      color: $text-green-white;
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    svg {
+      position: absolute;
+      top: -30px;
+      left: -60px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &-txt {
+    font-family: "PlayfairDisplay";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: $text-green-white;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.video {
+  margin-bottom: 50px;
+  &-wrap {
+    display: flex;
+    align-items: center;
+    padding: 31px 14px 31px 30px;
+    max-width: 970px;
+    width: 100%;
+    height: 601px;
+    border: 1px solid $border-color;
+    border-radius: 32px;
+    margin: 0 auto;
+    @media (max-width: 767px) {
+      height: 425px;
+    }
+    @media (max-width: 767px) {
+      height: 350px;
+    }
+  }
+  &-circle {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e4e4e4;
+    border-radius: 32px;
+  }
+  .youtube-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 21px;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}

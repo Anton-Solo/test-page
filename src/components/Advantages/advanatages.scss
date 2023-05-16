@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.advantages {
+  margin-top: 473.75px;
+  @media (max-width: 767px) {
+    margin-top: 280px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1199px) {
+      flex-direction: column;
+    }
+  }
+  &__block {
+    &:first-child {
+      margin-right: 30px;
+      @media (max-width: 1199px) {
+        margin-right: 0;
+      }
+    }
+    &-item {
+      padding: 50px 35px 52px;
+      border-top: 1px solid $border-color;
+      margin-bottom: 60px;
+      @media (max-width: 1199px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title {
+    @include title();
+    @media (max-width: 767px) {
+      font-size: 35px;
+    }
+    &.spec {
+      max-width: 450px;
+    }
+  }
+  &__txt {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

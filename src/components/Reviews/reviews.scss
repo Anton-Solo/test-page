@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.reviews {
+  margin-bottom: 100px;
+  &-head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  &-title {
+    @include title();
+  }
+  &-txt {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 400px;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1199px) {
+      flex-direction: column;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 40px;
+      background-size: cover;
+      background-position: center;
+      &:nth-child(1) {
+        background-image: url(../../images/review-first.png);
+      }
+      &:nth-child(2) {
+        background-image: url(../../images/review-sec.png);
+      }
+      &:nth-child(3) {
+        background-image: url(../../images/review-th.png);
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+        @media (max-width: 1199px) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+      &-txt {
+        font-size: 16px;
+        line-height: 26px;
+        color: $text-green-white;
+        margin-bottom: 26px;
+      }
+      &-author {
+        font-family: "PlayfairDisplay";
+        font-style: italic;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: $text-green-white;
+      }
+    }
+  }
+}
